@@ -2,4 +2,7 @@
 
 module MetaHub {
 
+  class Expression {
+
+  }
 }

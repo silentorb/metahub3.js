@@ -7,8 +7,8 @@ module.exports = function (grunt) {
   grunt.initConfig({
     ts: {
       node: {
-        src: "source/export.ts",        // The source typescript files, http://gruntjs.com/configuring-tasks#files
-        out: 'metahub-browser.js',                // If specified, generate an out.js file which is the merged js file
+        src: "source/export-node.ts",        // The source typescript files, http://gruntjs.com/configuring-tasks#files
+        out: 'metahub-node.js',                // If specified, generate an out.js file which is the merged js file
         options: {
           target: 'es5',
           module: 'commonjs',
@@ -19,8 +19,8 @@ module.exports = function (grunt) {
     },
     ts: {
       metahub: {
-        src: "source/export.ts",        // The source typescript files, http://gruntjs.com/configuring-tasks#files
-        out: 'metahub-node.js',                // If specified, generate an out.js file which is the merged js file
+        src: "source/export-browser.ts",        // The source typescript files, http://gruntjs.com/configuring-tasks#files
+        out: 'metahub-browser.js',                // If specified, generate an out.js file which is the merged js file
         options: {
           target: 'es5',
           module: 'commonjs',
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
           }
         ]
       },
-      commonjs: {
+      node: {
         src: "metahub-node.js",
         overwrite: true,
         replacements: [
